@@ -8,8 +8,8 @@ import max from '../assets/Max.svg'
 export default function Testimonials() {
   return (
     <section className='testimonials'>
-          <h2>
-            testimonials
+          <h2 className='testimonial-header display-text'>
+            Testimonials
           </h2>
           <ul className='user-testimonials'>
             <li className='testimonial-card'>

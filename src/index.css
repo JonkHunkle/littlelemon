@@ -10,6 +10,10 @@
 * {
   margin: 0;
 }
+#root{
+  width: 100svw;
+  overflow: hidden;
+}
 /*
   3. Allow percentage-based heights in the application
 */
@@ -412,20 +416,16 @@ padding:0
 .banner{
   display: none;
 }
-
 @media screen and (max-width:440px){
-  body{
-    width:100svw
-  }
   .nav{
     display: none;
   }
-  nav ul{
+  /* nav ul{
     display: flex;
     width: inherit;
     justify-content: space-between;
     padding:0
-  }
+  } */
   .logo{
     width:50svw;
     padding:0
@@ -467,43 +467,79 @@ width: 100svw;
   flex-direction: column;
   line-height: 1;
   width: 100%;
-  /* line-height: 1; */
 }
 .specials-header h2{
   text-align: center;
-  /* font-size:  + 1rem) !important; */
-  width: 100%;
 }
 .specials-header button{
   height: 10svw;
 }
 .specials-list{
-  overflow-x: auto;
-  padding:0 1rem
+  width: 100%;
+  padding:0 1rem;
+overflow-x: scroll;
 }
 .dish-card{
-  width:75svw
+  width:50svw
 }
 .testimonials{
+  /* overflow-x: hidden; */
   padding: 1rem 0;
- width: 100svw;
+ width: 100%;
+ gap:1rem
+}
+.testimonial-header{
+  color: white;
+  line-height: 1;
 }
 .user-testimonials{
-  overflow-x: auto;
-  width: 100%;
+  overflow-x: scroll;
+  width: inherit;
   padding:0 1rem
 }
+.about-section{
+  padding:0 1rem;
+  display: grid;
+  grid-template-rows: 1fr .5fr;
+  grid-template-columns: 1fr 1fr;
+}
+.about-header{
+  grid-column: 1/2;
+  line-height: 1;
+  margin: auto;
+}
+.about-text{
+  grid-column: 1/4;
+  grid-row: 2/3;
+  text-align: center;
 
-
-
-
-
-
-
-
-.footer-nav{
-  gap:0;
-  overflow-x: auto;
+}
+.image-group{
+  grid-column: 3/4;
+  width: 100%;
+  padding:1rem;
 }
 
+.footer{
+padding:0;
+  overflow-x: hidden;
+}
+.footer-nav{
+  padding: 0;
+  width: auto;
+  gap: 1rem;
+  overflow-x: scroll;
+}
+.footer-links{
+  text-align: center;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.footer-links li {
+  text-align: center!important;
+}
+.footer-logo{
+  display: none;
+}
 }
