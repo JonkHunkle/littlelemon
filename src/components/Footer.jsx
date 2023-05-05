@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className='footer'>
             <img className='footer-logo' src={logo} alt="Little Lemon logo"></img>
             <menu className='footer-nav'>
-                <li className = "navigation" >
+                <li className = "footer-column" >
                     <h3 className="footer-header section-title">Navigation</h3>
                     <ul className="footer-links highlight">
                         <li>
@@ -30,7 +30,7 @@ export default function Footer() {
                         </li>
                     </ul>
                 </li>
-                <li className='contact'>
+                <li className='footer-column'>
                     <h3 className="footer-header section-title">Contact</h3>
                     <ul className="footer-links highlight">
                         <li>2395 Maldove Way,</li>
@@ -39,7 +39,7 @@ export default function Footer() {
                         <a href="mailto: info@littlelemon.com" target="_blank" rel="noreferrer">info@littlelemon.com</a>
                     </ul>
                 </li>
-                <li className='connect'>
+                <li className='footer-column'>
                     <h3 className="footer-header section-title">Connect</h3>
                     <ul className="footer-links highlight">
                         <a href="https://www.facebook.com/thelittlelemonshop/" target="_blank" rel="noreferrer">Facebook</a>

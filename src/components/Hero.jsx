@@ -1,6 +1,7 @@
 import React from 'react'
 import foodImg from '../assets/Frame_20.svg'
 import banner from '../assets/banner.svg'
+import { Link } from 'react-router-dom'
 
 export default function Hero() {
   return (
@@ -11,7 +12,7 @@ export default function Hero() {
             <p className='sub-title'> Chicago</p>
             </hgroup>
             <p className='lead-text'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi illo magnam sequi enim quod? Facere, dolorum quam!</p>
-            <button className='hero-btn section-title' onClick={()=>console.log('reserve-btn')}>RESERVE A TABLE</button>
+            <a href='/reservation'className='button hero-btn section-title'>RESERVE A TABLE</a>
           </div>
           <img src={foodImg} alt='restaurant food' className='restaurant-food'/>
           <img src={banner} alt='restaurant food' className='banner'/>
