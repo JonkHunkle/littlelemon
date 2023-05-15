@@ -1,8 +1,10 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
+import * as bookingAPI from '../bookingAPI'
 
-export default function ReservationInfo({ reservation, setReservation}) {
+export default function ReservationInfo({dates}) {
 
-  const [toggleComments, setToggleComments] = useState(false)
+  // const [toggleComments, setToggleComments] = useState(false)
+  const [reservation, setReservation]= useState({})
 
 
  const handleReservationChange=(e)=>{
@@ -13,19 +15,25 @@ export default function ReservationInfo({ reservation, setReservation}) {
   })
 }
 
- const handleToggle=(e)=>{
-setToggleComments(!toggleComments)
- }
+
+const handleSubmit=(e)=>{
+  e.preventDefault()
+  console.log(reservation)
+}
 
 
-
+const showDates = ()=>{
+  return dates?.map(date=>
+    <option value={date}>{date}</option>
+  )
+}
 
   return (
-    <form style={{ backgroundColor:'white', placeSelf:'center', alignItems:"center", display:'flex', flexDirection:"column",gap:'1rem', margin:'2rem', lineHeight:1.25, borderRadius:'1rem', minWidth:'75svw', padding:'1rem'}}>
+    <form className='reservation-form'>
       <h3>Reserve a table</h3>
          <label>
-           Name: &nbsp;
-           <input name="name" data-testid="name"type='text' onChange={handleReservationChange}/>
+           Name:
+           <input name="name" data-testid='name' type='text' onChange={handleReservationChange}/>
          </label>
          <label>
            Phone: &nbsp;
@@ -37,7 +45,9 @@ setToggleComments(!toggleComments)
          </label>
          <label>
            Date: &nbsp;
-           <input name="date" type='date' onChange={handleReservationChange}/>
+           <select name="date" type='date' onChange={handleReservationChange}>
+           {showDates()}
+</select>
          </label>
          <label>
            Time: &nbsp;
@@ -51,16 +61,16 @@ setToggleComments(!toggleComments)
            Occasion: &nbsp;
            <input name="occasion" type='text' onChange={handleReservationChange}/>
          </label>
-         <label>
+         {/* <label>
            Comments: &nbsp;
            <input name="comments" type='checkbox' value={toggleComments} onClick={handleToggle}/>
          </label>
          {toggleComments&&(<>
          <textarea style={{width:'100%', marginTop:'.75rem'}} name="comments" type='text' onChange={handleReservationChange}/>
          </>
-         )}
+         )} */}
          
-       <button style={{placeSelf:'center'}} type="submit">Submit</button>
+       <button style={{placeSelf:'center'}} data-testid='btn' type="submit" onClick={handleSubmit}>Submit</button>
     </form>
     
   )

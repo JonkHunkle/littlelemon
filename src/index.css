@@ -166,6 +166,7 @@ p{
   color: #F4CE14;
 }
 nav{
+  background-color: #EDEFEE;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -546,11 +547,62 @@ padding:0;
 }
 }
 
+
+
+
+.reservation-form{
+  background-color:white;
+  place-self:center;
+  align-items:center;
+  display:flex;
+  flex-direction:column;
+  margin:5rem 0;
+  line-height:1.25;
+  border-radius:1rem;
+  min-width:25svw;
+  padding:1rem;
+    @media screen and (max-width:27.5rem){
+  min-width: 50svw;
+}
+}
+.reservation-form label {
+
+  text-align: center;
+  padding: .5rem;
+  min-width: 100%;
+  min-height: fit-content;
+  /* gap: 1rem; */
+  display:flex;
+  align-items: start;
+  justify-content: space-between;
+  @media screen and (max-width:27.5rem){
+    padding:1rem;
+}}
+.reservation-form input {
+  /* border: 0; */
+  padding:0;
+  max-width: 75%;
+  /* outline: 0; */
+  /* background: transparent; */
+  flex-grow: 1;
+  /* margin:1px; */
+  /* border-bottom: 1px solid black; */
+  text-align:center;
+  @media screen and (max-width:27.5rem){
+    text-align:center
+}}
+
+
+.reservation-form textarea {
+  @media screen and (min-width:27.5rem){
+    max-width: 20rem;
+  }}
 .reservation-banner{
-background-color: blue;
+text-align: center;
+background: url('./assets/foodbanner.jpg') no-repeat 0%;
+color:yellow;
   @media screen and (max-width:27.5rem){
     /* height:min-content; */
-    color:yellow;
     background: url('./assets/reservation-banner.svg') no-repeat 100%;
     /* min-height:15svh; */
     display:flex;
