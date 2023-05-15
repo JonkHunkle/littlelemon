@@ -1,7 +1,5 @@
 import React,{useEffect, useState} from 'react'
 import ReservationForm from './ReservationForm'
-import SuccessCard from './SuccessCard'
-import Footer from './Footer'
 import Header from './Header'
 import * as reservationAPI from '../bookingAPI'
 
@@ -20,14 +18,10 @@ setDates(reservationAPI.fetchAPI(new Date()))
             <h2 className='display-text'>
                 Chicago
             </h2>
-            {/* <h3 className='sub-title'>
-                Chicago
-            </h3> */}
         </section>
         
        <ReservationForm dates={dates}/>
         
-    {/* /* <Footer/> */}
     <footer style={{placeSelf:'center', paddingTop:'2rsem'}}>If you have an account, please <strong className='secondary-text'>sign-in</strong></footer>
     </div>
     </>)

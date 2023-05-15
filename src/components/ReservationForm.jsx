@@ -1,9 +1,7 @@
-import React, {useEffect, useState} from 'react'
-import * as bookingAPI from '../bookingAPI'
+import React, { useState} from 'react'
 
 export default function ReservationInfo({dates}) {
 
-  // const [toggleComments, setToggleComments] = useState(false)
   const [reservation, setReservation]= useState({})
 
 
@@ -61,15 +59,6 @@ const showDates = ()=>{
            Occasion: &nbsp;
            <input name="occasion" type='text' onChange={handleReservationChange}/>
          </label>
-         {/* <label>
-           Comments: &nbsp;
-           <input name="comments" type='checkbox' value={toggleComments} onClick={handleToggle}/>
-         </label>
-         {toggleComments&&(<>
-         <textarea style={{width:'100%', marginTop:'.75rem'}} name="comments" type='text' onChange={handleReservationChange}/>
-         </>
-         )} */}
-         
        <button style={{placeSelf:'center'}} data-testid='btn' type="submit" onClick={handleSubmit}>Submit</button>
     </form>
     
